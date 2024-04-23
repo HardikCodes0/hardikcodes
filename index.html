@@ -2,159 +2,160 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body {
-            background-color: #e4f9f5;
-            overflow-y: scroll;
-            text-align: center;
-        }
-        .firstpage {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr 1fr;
-        }
-        .cloud {
-            grid-column: 3;
-            grid-row: 1;
-            display: flex;
-            align-items: center;
-        }
-        .cloud2 {
-            grid-column: 1;
-            grid-auto-flow: 1;
-        }
-        .intro {
-            grid-column: 2;
-            grid-row: 1;
-            padding-top: 120px;
-            font-family: 'Pacifico', cursive;
-            font-size: large;
-            
-            
-        }
-        .span {
-            font-family: 'Kaushan Script', cursive;
-        }
-        
-        .mountain {
-            display: flex;
-            align-items: center;
-            grid-column: 2;
-
-        }
-        .mypic {
-            display: grid;
-            grid-row: 3;
-            grid-column: 2;
-            align-items: end;
-            justify-content: space-around;
-            
-        }
-        .int {
-            font-family: 'Merriweather', serif;
-        }
-        .skills {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-        }
-        .my {
-            grid-column: 2;
-            align-items: center;
-            font-family: 'Anton', sans-serif;
-        }
-        .para {
-            grid-column: 2;
-            font-family: 'Merriweather', serif;
-        }
-        .secondpage {
-            font-family: 'Anton', sans-serif;
-
-        }
-        .hot {
-            font-family: 'Anton', sans-serif;
-
-        }
-        .outro {
-            grid-column: 2;
-            margin-top: 50px;
-        }  
-        .btn {
-            background: #11cdd4;
-            border-radius: 8px;
-            font-family: "Montserrat", sans-serif;
-            color: #ffffff;
-            font-size: 20px;
-            padding: 20px 30px 20px 30px;
-            text-decoration: none;
-        }
-        .end {
-            background-color:  #11cdd4;
-
-            text-align: center;
-            padding-bottom: 3px;
-            grid-column: 1 / -1;
-            
-
-
-        }
-
-    </style>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="firstpage">
-        <div class="cloud"><img src="/cloud.png"></div>
-        <div class="cloud2"><img src="/cloud.png"></div>
-        <div class="intro"><h1>I'm Hardik <br> <span class="span">im a web developer</span></h1></div>
-        <div class="mountain"><img src="/mountain.png"></div>
-        <div class="mypic"><img src="/images.jpeg"></div>
-    </div>  
-    <div class="secondpage">
-        <h1>HELLO...</h1>
-        <span class="int"><h3>I am full stack web developer.<br>I ❤️ coffee and brew my own beers.</h3></span>
-        
-    </div>
-    <br> 
-    <div class="skills">
-        <div class="my"><h1>My Skills</h1><br><h3>Design & Development</h3></div>        
-        <div class="para"><img src="/cat-typing.gif"> <br> I started learning to code when I was 12 years old because I wanted to make my own video games. 
-            Over time, I have gained a wealth of experience designing and developing mobile and web applications.
-            <br>
-            <span class="hot"><h3>Hot Wings Challenge</h3></span>
-            <img src="/chillies.png" height="150px" width="150px">
-            <p>But my best skill is actually in eating hot wings. I am the undisputed queen of hot wing challenges. 
-                Ghost Peppers and Carolina Reapers are my favourite snacks.</p>
-        </div>
-        <br>
-        <div class="outro">
-        <h1>Get in touch</h1> 
-        <a class="btn" href="https://www.instagram.com/adolf__nvm/">CONTACT ME</a>
-       
-        </div> 
-        <br>
-        <div><h1>‎ </h1></div>
+    <title>CSS Envelope + Letter (Open/Close on Click)</title>
     
-    <div class="end">
-        <footer>thanks for visiting</footer>
-
-
+</head>
+<style>
+    :root{
+    --primary: #fff;
+    --bg-color: rgb(5, 53, 61);
+    --bg-envelope-color: #f5edd1;
+    --envelope-tab: #ecdeb8;
+    --envelope-cover: #e6cfa7;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --txt-color: #444;
+    --heart-color: rgb(252, 8, 231);
+  }
+  body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .container {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+  }
+  .container > .envelope-wrapper {
+    background: var(--bg-envelope-color);
+    box-shadow: 0 0 40px var(--shadow-color);
+  }
+  .envelope-wrapper > .envelope {
+    position: relative;
+    width: 300px;
+    height: 230px;
+  }
+  .envelope-wrapper > .envelope::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    border-top: 130px solid var(--envelope-tab);
+    border-right: 150px solid transparent;
+    border-left: 150px solid transparent;
+    transform-origin: top;
+    transition: all 0.5s ease-in-out 0.7s;
+  }
+  .envelope-wrapper > .envelope::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    width: 0px;
+    height: 0px;
+    border-top: 130px solid transparent;
+    border-right: 150px solid var(--envelope-cover);
+    border-bottom: 100px solid var(--envelope-cover);
+    border-left: 150px solid var(--envelope-cover);
+  }
+  .envelope > .letter {
+    position: absolute;
+    right: 20%;
+    bottom: 0;
+    width: 54%;
+    height: 80%;
+    background: var(--primary);
+    text-align: center;
+    transition: all 1s ease-in-out;
+    box-shadow: 0 0 5px var(--shadow-color);
+    padding: 20px 10px;
+  }
+  
+  .envelope > .letter > .text {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: var(--txt-color);
+    text-align: center;
+    font-size: 8.5px;
+  }
+  .heart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    background: var(--heart-color);
+    z-index: 4;
+    transform: translate(-50%, -20%) rotate(45deg);
+    transition: transform 0.5s ease-in-out 1s;
+    box-shadow: 0 1px 6px var(--shadow-color);
+    cursor: pointer;
+  }
+  .heart:before, 
+  .heart:after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: var(--heart-color);
+    border-radius: 50%;
+  }
+  .heart:before {
+    top: -7.5px;
+  }
+  .heart:after {
+    right: 7.5px;
+  }
+  .flap > .envelope:before {
+    transform: rotateX(180deg);
+    z-index: 0;
+  }
+  .flap > .envelope > .letter {
+    bottom: 100px;
+    transform: scale(1.5);
+    transition-delay: 1s;
+  }
+  .flap > .heart {
+    transform: rotate(90deg);
+    transition-delay: 0.4s;
+  }
+</style>
+<body>
+    <div class="container">
+        <div class="envelope-wrapper">
+            <div class="envelope">
+                <div class="letter">
+                    <div class="text">
+                        <strong>Dear Person.</strong>
+                        <p>
+                            first of all ik this is cringe pr chull toh chull h meri jaan.
+                            now , hi its ur bf again , yes the moody bf who is unintentionally spoiling your mood these days and regretting later.
+                            just wanted to say 
+                            no im not bored of you ,
+                            you make me happy ,
+                            you make me smile 
+                            and i will never i repeat NEVER be bored or irritated by you.
+                            i love you forever
+                            <br>
+                            your cuto 
+                            <br>
+                            hardik
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="heart"></div>
+        </div>
     </div>
-    </div>
+    <script>
+        const envelope = document.querySelector('.envelope-wrapper');
+        envelope.addEventListener('click', () => {
+            envelope.classList.toggle('flap');
+        });
+    </script>
 </body>
-</html>
+</html> 
